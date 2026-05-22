@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว | น้องมังกร</title>
+    <!-- Google Fonts (Sarabun & Kanit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #121212; /* พื้นหลังสีดำโมเดิร์น */
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        /* Profile Card */
+        .profile-container {
+            background: #1e1e1e;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s ease;
+        }
+        .profile-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Header Accent (รูปมังกร/โทนสี) */
+        .profile-header-bg {
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        /* Avatar Icon */
+        .avatar-wrapper {
+            background: #2a2a2a;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -50px;
+            border: 4px solid #1e1e1e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .avatar-wrapper i {
+            font-size: 3.5rem;
+            color: #ff4757; /* สีแดงมังกรตัดกับธีมดำ */
+        }
+
+        /* Profile Content */
+        .profile-body {
+            padding: 70px 30px 30px 30px;
+            text-align: center;
+        }
+        .profile-name {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .profile-nickname {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        /* Divider Line */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #3a3a3a, transparent);
+            margin: 20px 0;
+        }
+
+        /* Info Details Section */
+        .info-section {
+            text-align: left;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            background: #252525;
+            padding: 12px 15px;
+            border-radius: 12px;
+            border-left: 4px solid #ff4757;
+        }
+        .info-icon {
+            width: 35px;
+            font-size: 1.2rem;
+            color: #ff4757;
+            text-align: center;
+            margin-right: 15px;
+        }
+        .info-label {
+            font-size: 0.9rem;
+            color: #888888;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .info-text {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Favorite Foods Tags */
+        .food-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #333;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        /* Color Badge */
+        .color-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #000000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            border: 1px solid #333;
+        }
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #000000;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- ด้านบนของการ์ด -->
+        <div class="profile-header-bg">
+            <div class="avatar-wrapper">
+                <!-- ไอคอนมังกรล้อกับชื่อเล่น -->
+                <i class="fa-solid fa-dragon"></i>
+            </div>
+        </div>
+
+        <!-- ข้อมูลส่วนตัว -->
+        <div class="profile-body">
+            <h1 class="profile-name">ด.ช.วัฒนรันดร์ สุนันตะพันธ์</h1>
+            <p class="profile-nickname">ชื่อเล่น: มังกร</p>
+            
+            <div class="divider"></div>
+
+            <div class="info-section">
+                <!-- วันเกิด -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div>
+                        <span class="info-label">วันเกิด</span>
+                        <span class="info-text">5 มีนาคม พ.ศ. 2555</span>
+                    </div>
+                </div>
+
+                <!-- อาหารที่ชอบ -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <span class="info-label">อาหารที่ชอบ</span>
+                        <div class="food-tags">
+                            <span class="tag">ผัดถั่ว</span>
+                            <span class="tag">ข้าวขาหมู</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- สีที่ชอบ -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div>
+                        <span class="info-label">สีที่ชอบ</span>
+                        <div class="color-badge">
+                            <div class="color-dot"></div>
+                            <span>สีดำ</span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- จบ info-section -->
+
+        </div>
+    </div>
+
+</body>
+</html>
